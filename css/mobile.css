@@ -1,0 +1,181 @@
+/* ─── Mobile  (max-width: 899px) ─────────────────────────────────────── */
+@media (max-width: 899px) {
+
+  /* ── Tighter container padding ── */
+  .section-inner,
+  .header-inner,
+  .footer-inner,
+  .hero-inner {
+    padding: 0 20px;
+  }
+
+  /* ── Section spacing ── */
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-subtitle {
+    margin-bottom: 32px;
+  }
+
+  /* ── Hamburger: show ── */
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* ── Mobile nav: fullscreen dropdown ── */
+  .main-nav {
+    display: none;
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(246, 247, 249, .98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    z-index: 199;
+    border-top: 1px solid var(--pft-border);
+    padding: 24px 20px;
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  .main-nav a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--pft-text);
+    padding: 16px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--pft-border);
+    letter-spacing: -.01em;
+  }
+
+  .main-nav a:last-child {
+    border-bottom: none;
+  }
+
+  .main-nav a::after {
+    display: none;
+  }
+
+  /* ── Instagram strip ── */
+  .insta-strip-inner {
+    padding: 14px 20px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .insta-sub {
+    display: none;
+  }
+
+  .insta-label {
+    font-size: .9rem;
+  }
+
+  .insta-btn {
+    padding: 10px 18px;
+    font-size: .84rem;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 64px 0 56px;
+    text-align: center;
+  }
+
+  .hero::before,
+  .hero::after {
+    opacity: .5;
+  }
+
+  .hero-tagline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  /* ── Kontakt: single column ── */
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── Timeline: single column, no rail ── */
+  .timeline-row {
+    grid-template-columns: 1fr;
+    margin-bottom: 14px;
+  }
+
+  .timeline-center {
+    display: none;
+  }
+
+  .timeline-empty {
+    display: none;
+  }
+
+  .timeline-cell {
+    width: 100%;
+  }
+
+  .timeline-card {
+    padding: 20px 22px;
+  }
+
+  /* ── Preise: hide iframe, show download card ── */
+  .pdf-wrapper {
+    display: none;
+  }
+
+  .pdf-mobile-card {
+    display: flex;
+  }
+
+  /* ── Partner: 2×2 ── */
+  .partner-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ─── Small phones  (max-width: 479px) ──────────────────────────────── */
+@media (max-width: 479px) {
+
+  /* Stack hero buttons vertically */
+  .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-ctas .btn {
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Partner: single column on very small screens */
+  .partner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Kontakt phone number wraps without overflow */
+  .kontakt-link {
+    word-break: break-all;
+  }
+
+  /* Footer nav: stack */
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}

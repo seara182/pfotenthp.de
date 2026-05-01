@@ -1,0 +1,104 @@
+/* ─── Desktop  (min-width: 900px) ───────────────────────────────────── */
+@media (min-width: 900px) {
+
+  /* ── Hero: full viewport height, content centered vertically ── */
+  .hero {
+    min-height: calc(100svh - var(--header-h));
+    display: flex;
+    align-items: center;
+    padding: 64px 0;
+  }
+
+  .hero-inner {
+    width: 100%;
+  }
+
+  /* ── Kontakt: 3-column row ── */
+  .cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ── Timeline: left-center-right ── */
+  .timeline-row {
+    grid-template-columns: 1fr 36px 1fr;
+    align-items: stretch;
+    min-height: 130px;
+  }
+
+  .timeline-cell {
+    display: flex;
+    align-items: center;
+  }
+
+  .timeline-left  { justify-content: flex-end;  padding-right: 24px; }
+  .timeline-right { justify-content: flex-start; padding-left: 24px;  }
+
+  .timeline-card {
+    max-width: 460px;
+    width: 100%;
+  }
+
+  /* ── Preise: show iframe, hide mobile card ── */
+  .pdf-wrapper {
+    display: block;
+  }
+
+  .pdf-mobile-card {
+    display: none;
+  }
+
+  /* ── Partner: 4-column row ── */
+  .partner-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* ── Footer: horizontal layout ── */
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    flex-wrap: wrap;
+    gap: 32px 48px;
+  }
+
+  .footer-contact {
+    align-items: flex-start;
+  }
+
+  .footer-nav {
+    justify-content: flex-end;
+  }
+
+  .footer-copy {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    padding-top: 28px;
+    margin-top: 4px;
+  }
+}
+
+/* ─── Large desktop  (min-width: 1400px) ───────────────────────────── */
+@media (min-width: 1400px) {
+
+  /* More breathing room in sections */
+  .section {
+    padding: 104px 0;
+  }
+
+  /* Hero title can grow a touch more */
+  .hero-title {
+    font-size: 5.8rem;
+  }
+
+  /* Timeline cards can be a little wider */
+  .timeline-card {
+    max-width: 520px;
+  }
+
+  /* PDF taller on big screens */
+  .pdf-frame {
+    height: 780px;
+  }
+}
